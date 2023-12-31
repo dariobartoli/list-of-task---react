@@ -46,14 +46,16 @@ export const TodoApp = () => {
 
   return (
     <div className='allBody'>
-        <h1>List of tasks</h1>
-        <form onSubmit={handleSubmit} className="form__create">
-            <input onChange={handleInput} value={title}/>
-            <button onClick={handleSubmit}>Create</button>
-        </form>
-        <div className='task__container'> 
-            {list.map(task => (<Task key={task.id} task={task} onUpdate={handleUpdate} onDelete={handleDelete}/>))}
-        </div>
+        <section className='container'>
+            <h1>List of tasks</h1>
+            <form onSubmit={handleSubmit} className="form__create">
+                <input onChange={handleInput} value={title}/>
+                <button onClick={handleSubmit}>Create</button>
+            </form>
+            <div className='task__container'> 
+                {list.map(task => (<Task key={task.id} task={task} onUpdate={handleUpdate} onDelete={handleDelete}/>))}
+            </div>
+        </section>
     </div>
   )
 }

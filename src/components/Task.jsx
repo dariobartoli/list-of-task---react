@@ -29,7 +29,10 @@ export const Task = ({task, onUpdate, onDelete}) => {
 
             (
             <div className='task__list'>
-                <p>{task.title}</p>
+                <div>
+                    <p>{task.title}</p>
+
+                </div>
                 <button onClick={() => setIsEdit(!isEdit)} className="button__edit">Edit</button>
                 <button onClick={(e) => onDelete(task.id)} className="button__delete">Delete</button>
             </div>)}
